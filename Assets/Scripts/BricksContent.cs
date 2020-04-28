@@ -7,7 +7,6 @@ public class BricksContent : MonoBehaviour
 {
 	public float Speed = 0.001f;
 	public float ChangeColorPosition = -2.7f;
-	public int MinusScore = 200;
 	public float GameOverPosition = -8.3f;
 
 	private Vector3 PlusVector;
@@ -59,25 +58,25 @@ public class BricksContent : MonoBehaviour
 	{
 		if (IsContentOnChangeColorAndScorePosition(1, ChangeColorPosition))
 		{
-			ChangeColorAndScore(2, Color.green);
+			ChangeColorAndScore(2, Color.green, 300);
 		}
-		if (IsContentOnChangeColorAndScorePosition(2, ChangeColorPosition - ChangeColorPosition))
+		if (IsContentOnChangeColorAndScorePosition(2, ChangeColorPosition + ChangeColorPosition))
 		{
-			ChangeColorAndScore(1, Color.white);
+			ChangeColorAndScore(1, Color.white, 100);
 		}
 	}
 	private bool IsContentOnChangeColorAndScorePosition(int ChangeColorPhase, float Position)
 	{
 		return this.ChangeColorPhase == ChangeColorPhase && transform.position.y < Position;
 	}
-	private void ChangeColorAndScore(int ColorPhase,Color NewColor)
+	private void ChangeColorAndScore(int ColorPhase,Color NewColor, int Score)
 	{
 		childs = GetComponentsInChildren<StandartBrick>().ToList();
 		ChangeColorPhase = ColorPhase;
 		for (int i = 0; i < childs.Count; i++)
 		{
 			childs[i].BrickSpriteRenderer.color = NewColor;
-			childs[i].ScoreOnBrake = childs[i].ScoreOnBrake - MinusScore;
+			childs[i].ScoreOnBrake = Score;
 		}
 	}
 	private void GameOverOrNot()
