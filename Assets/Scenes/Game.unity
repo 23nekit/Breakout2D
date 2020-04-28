@@ -2965,7 +2965,7 @@ MonoBehaviour:
   DefaultPlatformWidthInPixels: 4
   ColisionAngle: 200
   BallsManagerObject: {fileID: 957703411}
-  BonusManagerObject: {fileID: 0}
+  BonusManagerObject: {fileID: 1806515934}
   ThisSpriteRender: {fileID: 0}
 --- !u!82 &1996445024
 AudioSource:
@@ -3334,7 +3334,7 @@ MonoBehaviour:
   StartPosition: {x: -0.145, y: 0.6, z: 0}
   DeathEffect: {fileID: 6196324735344184587, guid: 6147155426e01164e99eb5d7c3caf66a,
     type: 3}
-  RandomBonusRange: {x: 0, y: 0}
+  RandomBonusRange: {x: 0, y: 13}
   MaximumBricks: 36
   BonusManagerObject: {fileID: 1806515934}
 --- !u!1 &2094156668

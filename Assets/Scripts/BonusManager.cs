@@ -47,7 +47,7 @@ public class BonusManager : MonoBehaviour
 		else if (SpeedUpTimer > 0)
 		{
 			SpeedUpTimer -= 1 * Time.deltaTime;
-			BonusList[2].BonusTextView.text = SpeedUpTimer.ToString();
+			BonusList[1].BonusTextView.text = SpeedUpTimer.ToString();
 		}
 	}
 	private void SlowTimerEffectIfTimerActive()
@@ -69,14 +69,14 @@ public class BonusManager : MonoBehaviour
 
 	public void ActivateBonus(Collider2D Collision)
 	{
-		Destroy(Collision.gameObject);
 		GrowBonusActivateTimerAudioAndVideoEffectsShowUIIfItIs(Collision);
 		SpeedUpBonusActivateTimerAudioAndVideoEffectsShowUIIfItIs(Collision);
 		SlowTimeBonusActivateTimerAudioAndVideoEffectsShowUIIfItIs(Collision);
+		Destroy(Collision.gameObject);
 	}
 	private void GrowBonusActivateTimerAudioAndVideoEffectsShowUIIfItIs(Collider2D Collision)
 	{
-		if (Collision.transform.tag == "GrowBonus")
+		if (Collision.gameObject.transform.tag == "GrowBonus")
 		{
 			Destroy(Collision.gameObject);
 			if (GrowTimer == -1)
