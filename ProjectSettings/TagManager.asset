@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Ball
+  - Brick
+  - Death
+  - GrowBonus
+  - SlowTimeBonus
+  - SpeedUpBonus
+  - MultiBallBonus
+  - WallSound
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Background
+    uniqueID: 1241301379
+    locked: 0
+  - name: Platform
+    uniqueID: 3214744073
+    locked: 0
+  - name: Ball
+    uniqueID: 680069713
+    locked: 0
+  - name: Brick
+    uniqueID: 261824675
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Canvas
+    uniqueID: 1670786883
+    locked: 0
